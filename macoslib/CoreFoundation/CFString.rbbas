@@ -34,9 +34,9 @@ Implements CFPropertyList
 		    if Encoding(s) <> nil then
 		      p = CFStringCreateWithCString(nil, s, Encoding(s).code)
 		    else
-		      const kCFStringEncodingInvalidId = &hffffffff
+		      const kCFStringEncodingASCII = &h0600
 		      
-		      p = CFStringCreateWithCString(nil, s, kCFStringEncodingInvalidId)
+		      p = CFStringCreateWithCString(nil, s, kCFStringEncodingASCII)
 		    end if
 		    
 		    self.Constructor(p, hasOwnership)
